@@ -4,9 +4,8 @@ const Note = require('../models/note.model.js');
 //create and save new note
 exports.create = (req, res) => {
     // Validate request
-
-    //return req;
     if(!req.body.content) {
+        /*return res.status(200).send({'reqs':req */
         return res.status(400).send({
             message: "Note content can not be empty"
         });
@@ -63,8 +62,8 @@ exports.findOne = (req, res) =>{
 
 exports.update = (req, res) => {
     if(!req.body.content){
-        return res,status(400).send({
-            messag:"Note content cannot be empty"
+        return res.status(400).send({
+            message:"Note content cannot be empty"
         })
     }
 
